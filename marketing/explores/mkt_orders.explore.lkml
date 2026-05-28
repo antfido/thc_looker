@@ -6,7 +6,7 @@ include: "/marketing/views/3_logical/*.view.lkml"
 
 explore: mkt_orders {
 
-    hidden: no
+    hidden: yes
     view_name: orders_stg
     label: "Orders"
 
