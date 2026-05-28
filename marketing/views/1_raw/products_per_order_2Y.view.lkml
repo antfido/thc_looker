@@ -1,5 +1,5 @@
 view: products_per_order_2Y {
-  sql_table_name: `astrafy-dbt-demo.transformed.products_per_order_2Y` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.products_per_order_2Y` ;;
 
   dimension_group: date_date {
     type: time
