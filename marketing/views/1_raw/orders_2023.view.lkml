@@ -1,5 +1,5 @@
 view: orders_2023 {
-  sql_table_name: `astrafy-dbt-demo.transformed.orders_2023` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.orders_2023` ;;
 
   dimension: year {
     type: number
