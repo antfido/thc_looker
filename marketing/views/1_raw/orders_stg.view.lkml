@@ -1,5 +1,5 @@
 view: orders_stg {
-  sql_table_name: `astrafy-dbt-demo.transformed.orders_stg` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.orders_stg` ;;
 
   dimension_group: date_date {
     type: time
