@@ -17,7 +17,7 @@ explore: mkt_orders {
     }
 
     join: order_segmentation {
-      view_label: "Order"
+      view_label: "Orders"
       relationship: one_to_many
       sql_on: ${orders_stg.orders_id}=${order_segmentation.orders_id} ;;
     }
