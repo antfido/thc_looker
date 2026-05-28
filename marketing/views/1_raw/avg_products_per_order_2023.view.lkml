@@ -1,5 +1,5 @@
 view: avg_products_per_order_2023 {
-  sql_table_name: `astrafy-dbt-demo.transformed.avg_products_per_order_2023` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.avg_products_per_order_2023` ;;
 
   dimension: year {
     type: number
