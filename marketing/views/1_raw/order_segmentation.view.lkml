@@ -1,5 +1,5 @@
 view: order_segmentation {
-  sql_table_name: `astrafy-dbt-demo.transformed.order_segmentation` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.order_segmentation` ;;
 
   dimension_group: date_date {
     type: time
