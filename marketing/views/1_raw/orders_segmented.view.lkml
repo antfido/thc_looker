@@ -1,5 +1,5 @@
 view: orders_segmented {
-  sql_table_name: `@{project_id}.@{project_connection}orders_segmented` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.orders_segmented` ;;
 
   dimension: orders_id {
     type: number

@@ -1,5 +1,5 @@
 view: orders_stg {
-  sql_table_name: `@{project_id}.@{project_connection}.orders_stg` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.orders` ;;
 
   dimension_group: date_date {
     type: time
@@ -9,28 +9,28 @@ view: orders_stg {
   }
 
   dimension: customers_id {
-    type: number
+    type: string
     sql: ${TABLE}.customers_id ;;
   }
 
   dimension: orders_id {
-    type: number
+    type: string
     sql: ${TABLE}.orders_id ;;
   }
+
+  # dimension: year {
+  #   type: number
+  #   sql: ${TABLE}.year ;;
+  # }
+
+  # dimension: month {
+  #   type: number
+  #   sql: ${TABLE}.month ;;
+  # }
 
   dimension: net_sales {
     type: number
     sql: ${TABLE}.net_sales ;;
-  }
-
-  dimension: year {
-    type: number
-    sql: ${TABLE}.year ;;
-  }
-
-  dimension: month {
-    type: number
-    sql: ${TABLE}.month ;;
   }
 
   measure: count {
