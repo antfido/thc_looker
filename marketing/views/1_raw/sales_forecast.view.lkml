@@ -1,10 +1,10 @@
 view: sales_forecast {
-  sql_table_name: `astrafy-dbt-demo.transformed.sales_forecast` ;;
+  sql_table_name: `@{project_id}.@{project_connection}.sales_forecast` ;;
 
   dimension_group: date {
     type: time
     timeframes: [raw, date, week, month]
-    datatype: timestamp
+    datatype: date
     sql: ${TABLE}.date ;;
     label: "Forecast Week"
   }

@@ -32,5 +32,5 @@ explore: forecast_revenue {
 
     label: "Revenue Forecast"
     view_name: sales_forecast
-    hidden: yes
+    hidden: no
 }

@@ -8,7 +8,7 @@ view: +orders_stg {
   dimension_group: date_date { }
   dimension: customers_id { }
   dimension: orders_id {primary_key: yes }
-  dimension: year { }
-  dimension: month { }
+  # dimension: year { }
+  # dimension: month { }
   dimension: net_sales { }
 }

@@ -2,10 +2,10 @@ view: orders_stg {
   sql_table_name: `@{project_id}.@{project_connection}.orders` ;;
 
   dimension_group: date_date {
-    type: time
-    timeframes: [raw, date, week, month, quarter, year]
-    datatype: timestamp
-    sql: ${TABLE}.date_date ;;
+  type: time
+  timeframes: [raw, date, week, month, month_num, quarter, year]
+  datatype: date
+  sql: ${TABLE}.date_date ;;
   }
 
   dimension: customers_id {

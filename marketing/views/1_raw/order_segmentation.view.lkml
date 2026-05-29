@@ -1,37 +1,4 @@
 view: order_segmentation {
-  # sql_table_name: `@{project_id}.@{project_connection}.order_segmentation` ;;
-
-  # dimension_group: date_date {
-  #   type: time
-  #   timeframes: [raw, date, week, month, quarter, year]
-  #   datatype: timestamp
-  #   sql: ${TABLE}.date_date ;;
-  # }
-
-  # dimension: customers_id {
-  #   type: number
-  #   sql: ${TABLE}.customers_id ;;
-  # }
-
-  # dimension: orders_id {
-  #   type: number
-  #   sql: ${TABLE}.orders_id ;;
-  # }
-
-  # dimension: prior_orders_12m {
-  #   type: number
-  #   sql: ${TABLE}.prior_orders_12m ;;
-  # }
-
-  # dimension: segment {
-  #   type: string
-  #   sql: ${TABLE}.segment ;;
-  # }
-
-  # measure: count {
-  #   type: count
-  # }
-
   derived_table: {
     sql: WITH prior_orders AS (
           SELECT
@@ -67,8 +34,10 @@ view: order_segmentation {
   }
 
   dimension_group: date_date {
-    type: time
-    sql: ${TABLE}.date_date ;;
+  type: time
+  timeframes: [raw, date, week, month, quarter, year]
+  datatype: date
+  sql: ${TABLE}.date_date ;;
   }
 
   dimension: customers_id {
@@ -93,7 +62,7 @@ view: order_segmentation {
 
   set: detail {
     fields: [
-      date_date_time,
+      date_date_date,
       customers_id,
       orders_id,
       prior_orders_12m,

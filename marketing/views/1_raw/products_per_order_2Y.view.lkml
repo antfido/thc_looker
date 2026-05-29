@@ -4,7 +4,7 @@ view: products_per_order_2Y {
   dimension_group: date_date {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
-    datatype: timestamp
+    datatype: date
     sql: ${TABLE}.date_date ;;
   }
 
