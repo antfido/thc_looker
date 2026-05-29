@@ -6,7 +6,7 @@ include: "/marketing/views/3_logical/*.view.lkml"
 
 explore: mkt_orders {
 
-    hidden: yes
+    hidden: no
     view_name: orders_stg
     label: "Orders"
 
@@ -24,4 +24,13 @@ explore: mkt_orders {
 
 
 
+}
+
+
+# Covers 8 weeks ahead from 2024-01-01 with 90% confidence intervals
+explore: forecast_revenue {
+
+    label: "Revenue Forecast"
+    view_name: sales_forecast
+    hidden: yes
 }
