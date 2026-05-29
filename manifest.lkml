@@ -1,11 +1,11 @@
 ### GLOBAL CONSTANT CONNECTION ###
 
 constant: project_id {
-  value: "kn-go-visanalytics-prod-01"
+  value: "astrafy-dbt-demo"
   export: override_required
 }
 
 constant: project_connection {
-  value: "go_visibility_analytics_uat"
+  value: "transformed"
   export: override_required
 }
